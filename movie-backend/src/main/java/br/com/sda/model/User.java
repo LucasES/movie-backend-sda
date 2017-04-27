@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -25,18 +26,23 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class User extends BaseEntity{
 	
+	private static final long serialVersionUID = -9116268797213174728L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
+	@NotNull(message = "O nome é obrigatório")
 	@NotEmpty
+	@Column(name = "NOME", nullable = false)
 	private String name;
 
 	@NotEmpty
-	@Column(unique = true, nullable = false)
+	@Column(name = "LOGIN", unique = true, nullable = false)
 	private String login;
 
 	@NotEmpty
+	@Column(name = "SENHA")
 	private String password;
 	
 	@JsonIgnore

@@ -33,26 +33,26 @@ public class BaseEntity implements Serializable {
 
 	@NotNull(message = "Data de criação obrigatória!")
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "CREATION_DATE", updatable = false, nullable = false)
+	@Column(name = "DATA_CRIACAO", updatable = false, nullable = false)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", timezone = "UTC")
 	@CreatedDate
 	private Date creationDate;
 
 	@NotNull(message = "Data de atualização obrigatória!")
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "LATEST_MODIFIED", nullable = false)
+	@Column(name = "ULTIMA_MODIFICACAO", nullable = false)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", timezone = "UTC")
 	@LastModifiedDate
 	private Date updateDate;
 
 	@NotNull(message = "Usuário de criação é obrigatório!")
 	@Size(min = 1, max = 50, message = "Usuário de criação deve ter entre 1 a 50 caracteres!")
-	@Column(name = "CREATION_USER", length = 50, nullable = false)
+	@Column(name = "USUARIO_CRIACAO", length = 50, nullable = false)
 	private String creationUser;
 
 	@NotNull(message = "Usuário de atualização é obrigatório")
 	@Size(min = 1, max = 50, message = "Usuário de atualização deve ter entre 1 a 50 caracteres!")
-	@Column(name = "UPDATE_USER", length = 50, nullable = false)
+	@Column(name = "USUARIO_MODIFICACAO", length = 50, nullable = false)
 	private String updateUser;
 
 	public BaseEntity() {
