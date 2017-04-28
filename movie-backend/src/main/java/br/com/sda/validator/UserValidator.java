@@ -12,7 +12,7 @@ import br.com.sda.service.impl.UserServiceImpl;
 /**
  * Classe de validação dos campos da classe User.
  * 
- * @author Lucas
+ * @author Lucas Araújo
  *
  */
 @Component
