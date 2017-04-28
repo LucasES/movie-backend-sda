@@ -28,4 +28,9 @@ public class GenreServiceImpl implements IGenreService{
 		return repository.findAll();
 	}
 
+	@Override
+	public Genre findById(Long id) {
+		return repository.findOne(id);
+	}
+
 }

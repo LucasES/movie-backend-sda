@@ -30,8 +30,8 @@ public class ActorServiceImpl implements IActorService{
 	}
 
 	@Override
-	public Actor findOne(Long id) {
-		return findOne(id);
+	public Actor findById(Long id) {
+		return findById(id);
 	}
 
 	@Override

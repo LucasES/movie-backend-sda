@@ -7,7 +7,7 @@ import br.com.sda.model.Actor;
 /**
  * Interface de serviço para manipulação de dados da classe Actor. 
  * 
- * @author Lucas
+ * @author Lucas Araújo
  */
 public interface IActorService {
 
@@ -24,7 +24,7 @@ public interface IActorService {
 	 * @param id
 	 * @return objeto do tipo Actor.
 	 */
-	public Actor findOne(Long id);
+	public Actor findById(Long id);
 	
 	/**
 	 * Persiste um objeto do tipo Actor.

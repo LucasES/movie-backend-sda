@@ -12,4 +12,12 @@ public interface IGenreService {
 	 * @return lista com objetos do tipo Genre.
 	 */
 	public List<Genre> findAll();
+	
+	/**
+	 * Retorna a um objeto do tipo Genre pelo ID fornecido.
+	 * 
+	 * @param id
+	 * @return objeto do tipo Genre.
+	 */
+	public Genre findById(Long id);
 }

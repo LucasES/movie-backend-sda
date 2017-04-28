@@ -19,7 +19,7 @@ public interface IUserService {
 	 * @param id
 	 * @return objeto do tipo User.
 	 */
-	public User findOne(Long id);
+	public User findById(Long id);
 	
 	/**
 	 * Persiste um objeto do tipo User.
