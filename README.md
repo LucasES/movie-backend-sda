@@ -2,7 +2,7 @@
 
 Este projeto tem como objetivo implementar um sistema utilizando as tecnologias: SpringBboot, Spring Data JPA. Spring Security e Maven.
 
-Com isso, esse projeto irá disponibilizar serviços REST que permitam realizar a manipulação de um sistema que filmes.
+Com isso, o sistema ira disponibilizar um serviço REST com o objeto de gerênciar um sistema para filmes.
 
 ## Criação do Banco de Dados ##
 
