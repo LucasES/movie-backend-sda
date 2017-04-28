@@ -11,5 +11,5 @@ import br.com.sda.model.User;
  */
 public interface UserRepository extends JpaRepository<User, Long>{
 
-	public User findByLogin(String login);
+	public User findByUsername(String username);
 }

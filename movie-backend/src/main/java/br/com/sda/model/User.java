@@ -40,8 +40,8 @@ public class User extends BaseEntity{
 	private String name;
 
 	@NotEmpty
-	@Column(name = "LOGIN", unique = true, nullable = false)
-	private String login;
+	@Column(name = "USERNAME", unique = true, nullable = false)
+	private String username;
 
 	@NotEmpty
 	@Column(name = "SENHA")
@@ -59,7 +59,7 @@ public class User extends BaseEntity{
 		super();
 		this.id = user.getId();
 		this.name = user.getName();
-		this.login = user.getLogin();
+		this.username = user.getUsername();
 		this.password = user.getPassword();
 		this.roles = user.getRoles();
 	}
@@ -80,12 +80,12 @@ public class User extends BaseEntity{
 		this.name = name;
 	}
 
-	public String getLogin() {
-		return login;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setLogin(String login) {
-		this.login = login;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
