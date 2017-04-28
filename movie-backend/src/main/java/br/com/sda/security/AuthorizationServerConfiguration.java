@@ -37,7 +37,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
             .authorities("ROLE_CLIENT", "ROLE_TRUSTED_CLIENT")
             .scopes("read", "write", "trust")
             .secret("sda@12345")
-            .accessTokenValiditySeconds(120).
+            .accessTokenValiditySeconds(300).
             refreshTokenValiditySeconds(600);
     }
  
