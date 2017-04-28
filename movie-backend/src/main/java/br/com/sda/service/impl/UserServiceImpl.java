@@ -1,5 +1,6 @@
 package br.com.sda.service.impl;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -47,6 +48,8 @@ public class UserServiceImpl implements IUserService{
 	public User save(User user) {
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setRoles(new HashSet<>(roleRepository.findAll()));
+        user.setCreationDate(new Date());
+        user.setCreationUser(user.getName());
 		return repository.save(user);
 	}
 
