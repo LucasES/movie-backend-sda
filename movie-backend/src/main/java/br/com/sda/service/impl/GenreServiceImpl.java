@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.sda.model.Genre;
 import br.com.sda.repository.GenreRepository;
-import br.com.sda.service.IGenreRepository;
+import br.com.sda.service.IGenreService;
 
 /**
  * Classe responsável em fornecer serviços para manipulação de dados da classe Genre.
@@ -18,7 +18,7 @@ import br.com.sda.service.IGenreRepository;
  */
 @Service
 @Transactional
-public class GenreServiceImpl implements IGenreRepository{
+public class GenreServiceImpl implements IGenreService{
 
 	@Autowired
 	private GenreRepository repository;

@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.com.sda.model.Genre;
 
-public interface IGenreRepository {
+public interface IGenreService {
 
 	/**
 	 * Retorna a lista de objetos do tipo Genre.
