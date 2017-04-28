@@ -39,7 +39,7 @@ public class UserServiceImpl implements IUserService{
 	}
 
 	@Override
-	public User findOne(Long id) {
+	public User findById(Long id) {
 		return repository.findOne(id);
 	}
 
