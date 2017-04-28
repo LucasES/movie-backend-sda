@@ -14,6 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -24,6 +25,7 @@ import javax.validation.constraints.NotNull;
  * @author lucas.araujo
  */
 @Entity
+@Table(name = "FILME")
 public class Movie extends BaseEntity{
 	
 	private static final long serialVersionUID = 1519935778895718785L;
@@ -51,10 +53,11 @@ public class Movie extends BaseEntity{
 	@Column(name = "CLASSIFICACAO")
 	private Integer rating;
 	
+	@Column(name = "IMDB_CLASSIFICACAO")
 	private Double imdbRating;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = "movie_actor", joinColumns = { @JoinColumn(name = "movie_id") }, inverseJoinColumns = { @JoinColumn(name = "actor_id") })
+	@JoinTable(name = "FILME_ATOR", joinColumns = { @JoinColumn(name = "FILME_ID") }, inverseJoinColumns = { @JoinColumn(name = "ATOR_ID") })
 	private Set<Actor> actors = new HashSet<Actor>();
 
 	public Movie() {

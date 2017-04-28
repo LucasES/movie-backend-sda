@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -24,6 +25,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * @author lucas.araujo
  */
 @Entity
+@Table(name = "USUARIO")
 public class User extends BaseEntity{
 	
 	private static final long serialVersionUID = -9116268797213174728L;
@@ -47,7 +49,7 @@ public class User extends BaseEntity{
 	
 	@JsonIgnore
 	@ManyToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = "user_role", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = { @JoinColumn(name = "role_id") })
+	@JoinTable(name = "USUARIO_PAPEL", joinColumns = { @JoinColumn(name = "USUARIO_ID") }, inverseJoinColumns = { @JoinColumn(name = "PAPEL_ID") })
 	private Set<Role> roles = new HashSet<Role>();
 
 	public User() {
