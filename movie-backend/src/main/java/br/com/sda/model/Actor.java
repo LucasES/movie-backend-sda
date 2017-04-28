@@ -19,7 +19,7 @@ public class Actor {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private Long id;
 	
 	@NotNull(message = "O nome é obrigatório!")	
 	@Column(name = "NOME", nullable=false)
@@ -28,17 +28,17 @@ public class Actor {
 	public Actor() {
 	}
 
-	public Actor(Integer id, String name) {
+	public Actor(Long id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

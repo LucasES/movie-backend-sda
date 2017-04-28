@@ -32,7 +32,7 @@ public class Movie extends BaseEntity{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private Long id;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="GENERO_ID")
@@ -63,7 +63,7 @@ public class Movie extends BaseEntity{
 	public Movie() {
 	}
 
-	public Movie(Integer id, Genre genre, String title, String studio, Date releaseDate, Integer rating,
+	public Movie(Long id, Genre genre, String title, String studio, Date releaseDate, Integer rating,
 			Double imdbRating, Set<Actor> actors) {
 		this.id = id;
 		this.genre = genre;
@@ -75,11 +75,11 @@ public class Movie extends BaseEntity{
 		this.actors = actors;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
