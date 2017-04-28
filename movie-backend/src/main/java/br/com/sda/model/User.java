@@ -14,6 +14,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -40,6 +41,7 @@ public class User extends BaseEntity{
 	private String name;
 
 	@NotEmpty
+	@Size(min = 4, max = 32, message = "O username deve ter entre 4 a 32 carácteres!")
 	@Column(name = "USERNAME", unique = true, nullable = false)
 	private String username;
 
