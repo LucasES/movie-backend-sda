@@ -22,7 +22,7 @@ import br.com.sda.service.IUserService;
  */
 @Service
 @Transactional
-public class UserService implements IUserService{
+public class UserServiceImpl implements IUserService{
 	
 	@Autowired
 	private UserRepository repository;

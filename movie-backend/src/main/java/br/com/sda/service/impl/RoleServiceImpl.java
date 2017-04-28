@@ -18,7 +18,7 @@ import br.com.sda.service.IRoleService;
  */
 @Service
 @Transactional
-public class RoleService implements IRoleService{
+public class RoleServiceImpl implements IRoleService{
 
 	@Autowired
 	private RoleRepository repository;

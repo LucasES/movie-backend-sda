@@ -18,7 +18,7 @@ import br.com.sda.service.IGenreRepository;
  */
 @Service
 @Transactional
-public class GenreService implements IGenreRepository{
+public class GenreServiceImpl implements IGenreRepository{
 
 	@Autowired
 	private GenreRepository repository;

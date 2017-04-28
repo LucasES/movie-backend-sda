@@ -19,7 +19,7 @@ import br.com.sda.service.IActorService;
  */
 @Service
 @Transactional
-public class ActorService implements IActorService{
+public class ActorServiceImpl implements IActorService{
 
 	@Autowired
 	private ActorRepository repository;
