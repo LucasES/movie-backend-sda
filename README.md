@@ -1,6 +1,6 @@
 # movie-backend-sda
 
-Este projeto tem como objetivo implementar um sistema utilizando as tecnologias: SpringBboot, Spring Data JPA. Spring Security e Maven.
+Este projeto tem como objetivo implementar um sistema utilizando as tecnologias: Spring Boot, Spring Data JPA, Spring Security e Maven.
 
 Com isso, o sistema ira disponibilizar um serviço REST com o objeto de gerênciar um sistema para filmes.
 
