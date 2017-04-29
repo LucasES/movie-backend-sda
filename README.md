@@ -20,7 +20,7 @@ CREATE DATABASE movie-sda-bd WITH ENCODING='UTF8';
 Para rodar localmente, alterar as seguintes configurações no arquivo "aplication.properties" da aplicação de acordo os dados do seu banco MySQL:
 ```code
 
-spring.datasource.url = jdbc:mysql://localhost:3306/wtisc
+spring.datasource.url = jdbc:mysql://localhost:3306/movie-sda-bd
 spring.datasource.username = [seu_usuario_do_banco]
 spring.datasource.password = [sua_senha_do_banco]
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
