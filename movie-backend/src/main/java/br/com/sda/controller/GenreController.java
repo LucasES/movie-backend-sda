@@ -19,7 +19,7 @@ import br.com.sda.service.IGenreService;
  * @author lucas.araujo
  */
 @RestController
-@RequestMapping("/sda/genero/")
+@RequestMapping("/api/genero/")
 public class GenreController {
 	
 	@Autowired

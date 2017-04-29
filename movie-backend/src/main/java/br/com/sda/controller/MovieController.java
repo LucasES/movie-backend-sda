@@ -20,7 +20,7 @@ import br.com.sda.service.IMovieService;
  * @author lucas.araujo
  */
 @RestController
-@RequestMapping("/sda/filme/")
+@RequestMapping("/api/filme/")
 public class MovieController {
 
 	@Autowired

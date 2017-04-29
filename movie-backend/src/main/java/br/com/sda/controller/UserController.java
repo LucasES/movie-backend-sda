@@ -20,7 +20,7 @@ import br.com.sda.service.IUserService;
  * @author lucas.araujo
  */
 @RestController
-@RequestMapping("/sda/usuario/")
+@RequestMapping("/api/usuario/")
 public class UserController {
 
 	@Autowired

@@ -19,7 +19,7 @@ import br.com.sda.service.IActorService;
  * @author lucas.araujo
  */
 @RestController
-@RequestMapping("/sda/ator/")
+@RequestMapping("/api/ator/")
 public class ActorController {
 	
 	@Autowired
