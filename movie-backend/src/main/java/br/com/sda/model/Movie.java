@@ -42,8 +42,8 @@ public class Movie extends BaseEntity{
 	@Column(name = "TITULO", nullable=false)
 	private String title;
 	
-	@Column(name = "ESTUDIO")
-	private String studio;
+	@Column(name = "URL_IMAGEM")
+	private String urlImage;
 	
 	@NotNull(message = "Data de lançamento obrigatória!")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -63,12 +63,12 @@ public class Movie extends BaseEntity{
 	public Movie() {
 	}
 
-	public Movie(Long id, Genre genre, String title, String studio, Date releaseDate, Integer rating,
+	public Movie(Long id, Genre genre, String title, String urlImage, Date releaseDate, Integer rating,
 			Double imdbRating, Set<Actor> actors) {
 		this.id = id;
-		this.genre = genre;
+		this.genre = genre;		
 		this.title = title;
-		this.studio = studio;
+		this.urlImage = urlImage;
 		this.releaseDate = releaseDate;
 		this.rating = rating;
 		this.imdbRating = imdbRating;
@@ -99,12 +99,12 @@ public class Movie extends BaseEntity{
 		this.title = title;
 	}
 
-	public String getStudio() {
-		return studio;
+	public String getUrlImage() {
+		return urlImage;
 	}
 
-	public void setStudio(String studio) {
-		this.studio = studio;
+	public void setUrlImage(String urlImage) {
+		this.urlImage = urlImage;
 	}
 
 	public Date getReleaseDate() {

@@ -22,7 +22,7 @@ public class Genre {
 	private Long id;
 	
 	@NotNull(message = "O nome é obrigatório!")
-	@Column(name = "nome", nullable = false)
+	@Column(name = "NOME", nullable = false)
 	private String name;
 
 	public Genre() {
