@@ -1,5 +1,7 @@
 package br.com.sda.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +17,9 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 @Table(name = "ATOR")
-public class Actor {
+public class Actor implements Serializable {
+
+	private static final long serialVersionUID = 5635872859734311811L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
