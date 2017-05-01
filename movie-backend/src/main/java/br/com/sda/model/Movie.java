@@ -34,7 +34,7 @@ public class Movie extends BaseEntity{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(targetEntity = Genre.class, fetch = FetchType.EAGER)
 	@JoinColumn(name="GENERO_ID")
 	private Genre genre;
 	
