@@ -1,5 +1,6 @@
 package br.com.sda.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -36,6 +37,8 @@ public class MovieServiceImpl implements IMovieService{
 
 	@Override
 	public Movie save(Movie movie) {
+		movie.setCreationDate(new Date());
+        movie.setCreationUser("ADMIN");
 		return repository.save(movie);
 	}
 
