@@ -32,15 +32,15 @@ public class UserValidator implements Validator{
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
         if (user.getUsername().length() < 4 || user.getUsername().length() > 32) {
-            errors.rejectValue("username", "Size.userForm.username");
+            errors.rejectValue("username", "O username deve ter entre 4 a 32 caracteres");
         }
         if (userService.findByUsername(user.getUsername()) != null) {
-            errors.rejectValue("username", "Duplicate.userForm.username");
+            errors.rejectValue("username", "Login já existe!");
         }
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty");
         if (user.getPassword().length() < 4 || user.getPassword().length() > 16) {
-            errors.rejectValue("password", "Size.userForm.password");
+            errors.rejectValue("password", "A senha deve ter entre 4 a 16 caracteres!");
         }
     }
 }
