@@ -14,8 +14,7 @@ import br.com.sda.model.Role;
 import br.com.sda.model.User;
 import br.com.sda.repository.UserRepository;
 
-
-@Service
+@Service("userDetailsService")
 public class UserDetailsServiceImpl implements org.springframework.security.core.userdetails.UserDetailsService{
 
 	@Autowired
